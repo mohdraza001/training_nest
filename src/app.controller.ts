@@ -1,7 +1,7 @@
-import { Controller, Get, Patch, Post } from '@nestjs/common';
+import { Controller, Delete, Get, Patch, Post, Put } from '@nestjs/common';
 import { AppService } from './app.service';
 
-@Controller()
+@Controller("/api")
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
@@ -16,5 +16,13 @@ export class AppController {
   @Patch("/")
   patchHello(): string {
     return this.appService.patchHello();
+  }
+  @Delete("/")
+  DeleteHello(): string {
+    return this.appService.DeleteHello();
+  }
+  @Put("/")
+  PutHello(): string {
+    return this.appService.PutHello();
   }
 }

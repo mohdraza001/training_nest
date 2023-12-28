@@ -8,4 +8,10 @@ export class AppService {
   patchHello(): string {
     return 'Hello World! patch';
   }
+  DeleteHello(): string {
+    return 'Hello World! delete';
+  }
+  PutHello(): string {
+    return 'Hello World! put';
+  }
 }
